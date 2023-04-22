@@ -1,0 +1,85 @@
+{
+  "name": "istype-checks",
+  "version": "1.0.0",
+  "description": "A small package for checking if a value is a certain type.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "format": "prettier --write --ignore-unknown .",
+    "prepare": "husky install",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "is",
+    "checks",
+    "type",
+    "check",
+    "typecheck",
+    "type-check",
+    "typecheck",
+    "type-checking",
+    "typechecking",
+    "type-checking",
+    "type-checks",
+    "typechecks",
+    "type-checks",
+    "type-checker",
+    "typechecker",
+    "type-checker",
+    "type-checkers",
+    "typechecker"
+  ],
+  "author": "Bradley Dirheimer",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.15.13",
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@typescript-eslint/parser": "^5.59.0",
+    "eslint": "^8.39.0",
+    "husky": "^8.0.3",
+    "prettier": "^2.8.7",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "prettier": {
+    "printWidth": 120,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "bracketSpacing": true,
+    "arrowParens": "always",
+    "endOfLine": "lf"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "overrides": [],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "rules": {}
+  }
+}
